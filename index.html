@@ -1,9 +1,307 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Balaji G | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
 <body>
-    <h1>Portfolio is Working!</h1>
+
+  <!-- PARTICLE BACKGROUND -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="logo">Balaji G</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#internship">Internship</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home">
+    <div class="hero">
+      <div class="hero-avatar" data-tilt>BG</div>
+      <div class="hero-badge">👋 Available for Opportunities</div>
+      <h1>
+        <span id="typed-text"></span><span class="cursor">|</span>
+      </h1>
+      <p class="hero-sub" id="role-text">Electronics & Communication Engineering Student</p>
+      <p class="hero-desc">Passionate about Web Development · Java · Problem Solving</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Contact Me</a>
+        <a href="#projects" class="btn-outline">View Projects</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">8.3</span><span class="stat-label">CGPA</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">2+</span><span class="stat-label">Projects</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">1</span><span class="stat-label">Internship</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">7+</span><span class="stat-label">Skills</span></div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label" data-aos="fade-right">01 — About</div>
+    <h2 data-aos="fade-right">About Me</h2>
+    <div class="about-grid">
+      <div class="about-card tilt-card" data-aos="fade-right" data-aos-delay="100">
+        <div class="about-avatar">BG</div>
+        <h3>Balaji G</h3>
+        <p>Final-year Electronics and Communication Engineering student at Panimalar Engineering College, Chennai.</p>
+        <p style="margin-top:8px;">Strong knowledge in Java, SQL, and web technologies. Seeking an entry-level role to apply technical skills and problem-solving abilities in a growth-oriented organization.</p>
+        <ul class="about-info">
+          <li><span>📍</span> Ranipet, Tamil Nadu</li>
+          <li><span>📞</span> 9025508181</li>
+          <li><span>✉️</span> balajigbalaji4321@gmail.com</li>
+          <li><span>🎓</span> CGPA: 8.3 / 10</li>
+        </ul>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/balaji-balaji" target="_blank">🔗 LinkedIn</a>
+          <a href="https://github.com/balaji" target="_blank">🐙 GitHub</a>
+          <a href="https://hackerrank.com/balajigbalaji431" target="_blank">💻 HackerRank</a>
+        </div>
+      </div>
+      <div class="education-card tilt-card" data-aos="fade-left" data-aos-delay="200">
+        <h3>Education</h3>
+        <div class="edu-item">
+          <div class="edu-line">
+            <div class="edu-dot"></div>
+            <div class="edu-connector"></div>
+          </div>
+          <div>
+            <h4>Panimalar Engineering College, Chennai</h4>
+            <p>B.E – Electronics and Communication Engineering</p>
+            <span class="badge">2023 – 2027</span>
+            <span class="badge badge-green">CGPA: 8.3</span>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-line">
+            <div class="edu-dot"></div>
+            <div class="edu-connector"></div>
+          </div>
+          <div>
+            <h4>M.K.G.B. Higher Secondary School</h4>
+            <p>Class XII – State Board</p>
+            <span class="badge">2023</span>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-line">
+            <div class="edu-dot"></div>
+          </div>
+          <div>
+            <h4>M.K.G.B. Higher Secondary School</h4>
+            <p>Class X – State Board</p>
+            <span class="badge">2021</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-label" data-aos="fade-right">02 — Skills</div>
+    <h2 data-aos="fade-right">Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-category tilt-card" data-aos="zoom-in" data-aos-delay="0">
+        <div class="skill-icon">💻</div>
+        <h3>Programming</h3>
+        <div class="skill-tags">
+          <span class="tag">C</span><span class="tag">Java</span><span class="tag">Python</span>
+        </div>
+      </div>
+      <div class="skill-category tilt-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="skill-icon">🌐</div>
+        <h3>Web Technologies</h3>
+        <div class="skill-tags">
+          <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span>
+        </div>
+      </div>
+      <div class="skill-category tilt-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="skill-icon">🗄️</div>
+        <h3>Database</h3>
+        <div class="skill-tags">
+          <span class="tag">MySQL</span>
+        </div>
+      </div>
+      <div class="skill-category tilt-card" data-aos="zoom-in" data-aos-delay="300">
+        <div class="skill-icon">🛠️</div>
+        <h3>Tools & Platforms</h3>
+        <div class="skill-tags">
+          <span class="tag">Git</span><span class="tag">VS Code</span><span class="tag">MS Excel</span>
+        </div>
+      </div>
+      <div class="skill-category tilt-card" data-aos="zoom-in" data-aos-delay="400">
+        <div class="skill-icon">🖥️</div>
+        <h3>Operating Systems</h3>
+        <div class="skill-tags">
+          <span class="tag">Windows</span><span class="tag">Linux</span>
+        </div>
+      </div>
+      <div class="skill-category tilt-card" data-aos="zoom-in" data-aos-delay="500">
+        <div class="skill-icon">🧠</div>
+        <h3>Concepts</h3>
+        <div class="skill-tags">
+          <span class="tag">DSA</span><span class="tag">OOP</span><span class="tag">Embedded</span><span class="tag">Image Processing</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skill Bars -->
+    <div class="skill-bars" data-aos="fade-up">
+      <h3 style="color:#fff; margin-bottom:24px;">Proficiency</h3>
+      <div class="skill-bar-item">
+        <div class="skill-bar-label"><span>HTML / CSS / JS</span><span>75%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-label"><span>Java</span><span>70%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-label"><span>Python</span><span>65%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="65"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-label"><span>C</span><span>70%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-label"><span>MySQL</span><span>55%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="55"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-label" data-aos="fade-right">03 — Projects</div>
+    <h2 data-aos="fade-right">Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card tilt-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="project-glow"></div>
+        <div class="project-icon">🎵</div>
+        <h3>RHYTHM – Music Web App</h3>
+        <span class="project-tag">Frontend</span>
+        <ul>
+          <li>Responsive music web application using HTML, CSS, JavaScript.</li>
+          <li>Interactive UI components for navigation and playback layout.</li>
+          <li>Mobile-friendly and user-centric interface design.</li>
+        </ul>
+        <div class="project-tech">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+      </div>
+      <div class="project-card tilt-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-glow glow-purple"></div>
+        <div class="project-icon">🎨</div>
+        <h3>Colour Sensing Detection</h3>
+        <span class="project-tag tag-purple">Python / ML</span>
+        <ul>
+          <li>Python-based system to detect and classify colours in images.</li>
+          <li>Applied image processing techniques to analyze pixel values.</li>
+          <li>Tested with multiple datasets for improved accuracy.</li>
+        </ul>
+        <div class="project-tech">
+          <span>Python</span><span>Image Processing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERNSHIP -->
+  <section id="internship">
+    <div class="section-label" data-aos="fade-right">04 — Experience</div>
+    <h2 data-aos="fade-right">Internship</h2>
+    <div class="internship-card tilt-card" data-aos="fade-up">
+      <div class="intern-header">
+        <div>
+          <h3>Global Technique Solutions</h3>
+          <p class="intern-role">⚡ Embedded Systems Intern</p>
+        </div>
+        <span class="badge">26 May – 26 Jun 2025</span>
+      </div>
+      <ul class="intern-points">
+        <li>Developed embedded C programs for microcontroller-based applications.</li>
+        <li>Worked with sensors, hardware interfacing, and embedded circuit testing.</li>
+        <li>Assisted in debugging firmware and optimizing embedded system performance.</li>
+        <li>Learned fundamentals of IoT and real-time embedded systems.</li>
+      </ul>
+    </div>
+
+    <h2 style="margin-top:3rem;" data-aos="fade-right">Certifications</h2>
+    <div class="cert-grid">
+      <div class="cert-card tilt-card" data-aos="fade-up" data-aos-delay="100">🏆 JavaScript Certification – Qspiders</div>
+      <div class="cert-card tilt-card" data-aos="fade-up" data-aos-delay="200">🏆 Web Application Development – 2025</div>
+      <div class="cert-card tilt-card" data-aos="fade-up" data-aos-delay="300">🏆 Online Programming & Web Dev Courses</div>
+      <div class="cert-card tilt-card" data-aos="fade-up" data-aos-delay="400">🏆 Coding Workshops & Technical Training</div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-label" data-aos="fade-right">05 — Contact</div>
+    <h2 data-aos="fade-right">Contact Me</h2>
+    <div class="contact-grid">
+      <div class="contact-info" data-aos="fade-right">
+        <h3>Get In Touch</h3>
+        <p>📍 Ranipet, Tamil Nadu</p>
+        <p>📞 9025508181</p>
+        <p>✉️ balajigbalaji4321@gmail.com</p>
+        <p><a href="https://linkedin.com/in/balaji-balaji" target="_blank">🔗 LinkedIn</a></p>
+        <p><a href="https://github.com/balaji" target="_blank">🐙 GitHub</a></p>
+        <p><a href="https://hackerrank.com/balajigbalaji431" target="_blank">💻 HackerRank</a></p>
+      </div>
+      <div class="contact-form" data-aos="fade-left">
+        <input type="text" id="fname" placeholder="Your Name" required />
+        <input type="email" id="femail" placeholder="Your Email" required />
+        <input type="password" id="fpassword" placeholder="Password (min 6 chars)" required />
+        <select id="fsubject">
+          <option value="">Select Subject</option>
+          <option>Job Opportunity</option>
+          <option>Project Collaboration</option>
+          <option>General Inquiry</option>
+        </select>
+        <textarea id="fmessage" rows="4" placeholder="Your Message..."></textarea>
+        <div class="radio-group">
+          <label><input type="radio" name="contactpref" value="email"/> Prefer Email</label>
+          <label><input type="radio" name="contactpref" value="phone"/> Prefer Phone</label>
+        </div>
+        <label class="checkbox-label">
+          <input type="checkbox" id="fagree"/> I agree to be contacted
+        </label>
+        <button type="button" onclick="validateForm()">Send Message 🚀</button>
+        <p id="formMsg"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Designed & Built by <span style="background:linear-gradient(135deg,#00d4ff,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:bold;">Balaji G</span></p>
+    <p>&copy; 2026 · All rights reserved</p>
+  </footer>
+
+  <!-- LIBRARIES -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
